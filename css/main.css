@@ -1,13 +1,15 @@
 @font-face {
     font-family: 'Gilroy Extra Bold';
-    src: url('../fonts/gilroyextrabold-webfont.woff2') format('woff2');
+    src: url('../fonts/gilroyextrabold-webfont.woff2') format('woff2'),
+         url('../fonts/gilroyextrabold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy Light';
-    src: url('../fonts/gilroylight-webfont.woff2') format('woff2');
+    src: url('../fonts/gilroylight-webfont.woff2') format('woff2'),
+         url('../fonts/gilroylight-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -41,6 +43,7 @@ a {
   position: relative;
 }
 
+
 /* Стили логотипа */
 /* Возникла проблема при добавлении свойства "top: любое значение;" */ 
 a.logo {
@@ -64,7 +67,7 @@ a.logo:active {
 }
 
 
-
+/* Стили основной навигации сайта */
 .main-navigation {
   background-color: #f7e296; 
   color: #000000;
@@ -77,9 +80,65 @@ a.logo:active {
 
 .wrap-flex {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
+.site-search {
+  width: 441px;
+  font-size: 0;
+}
 
+/* Вопрос по поводу кнопки сброса в поле поиска, как убрать */
+/* Вопрос EI 11 съехала кнопка, нормальное отображение при 490px*/
+.site-search input[type=search] {
+  background-color: #f7e296;
+  background-image: url(../img/search.svg);
+  background-repeat: no-repeat;
+  background-position: 3px 16px;
+  color: rgba(0, 0, 0, 0.3);
+  width: 355px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 20px;
+  border: none;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.site-search input[type=search]:focus {
+  outline: none;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000000;
+}
+
+.site-search input[type=submit] {
+  padding: 8px 19px;
+  border: 2px solid #000000; 
+  background-color: #f7e296;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  font-family: 'Open Sans', Arial, sans-serif;
+  opacity: 1;
+}
+
+input[type=search]:focus input[type=submit] {
+  opacity: 1;
+}
+
+.site-search input[type=submit]:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.site-search input[type=submit]:active {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.3);
+}
 
 
 .site-navigation {
