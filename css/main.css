@@ -56,6 +56,7 @@ a.logo {
 
 a.logo:hover {
   color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
 a.logo:active {
@@ -71,7 +72,13 @@ a.logo:active {
   width: 1040px;
   padding-left: 60px;
   padding-right: 60px;
+  padding-top: 40px;
 }
+
+.wrap-flex {
+  display: flex;
+}
+
 
 
 
