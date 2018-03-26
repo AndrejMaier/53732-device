@@ -13,16 +13,16 @@
       <nav class="main-navigation">
         <div class="wrap-flex">
           <form action="#" method="get" class="site-search">
-            <input class="field-search" type="search" name="site-search" placeholder="Поиск по сайту">
+            <input type="search" name="site-search" placeholder="Поиск по сайту">
             <input class="btn-search" type="submit" value="Найти">
-          </form>
+        </form>
           <a href="#" class="user-sing">Войти</a>
           <a href="#" class="compare">Сравнить</a>
           <a href="#" class="cart">Корзина</a>
         </div>
         <ul class="site-navigation">
-          <li>
-            <a href="#">Каталог товаров</a>
+          <li class="nav-catalog-list">
+            <a href="catalog-list.html">Каталог товаров</a>
             <ul class="sub-site-navigation">
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
@@ -34,16 +34,18 @@
           </li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="nav-contact"><a href="#">Контакты</a></li>
         </ul>
       </nav>
       <ul class="slider">
-        <li class="item item-1">
-          <img src="/img/slider-1.png" alt="Картинка 1 слайдера" width="384" height="486" class="slider-img">
+        <li class="item item-1 item-active">
+          <div class="slider-img">
+            <img  src="img/slider-1.png" alt="Картинка 1 слайдера" width="384" height="486" class="slider-img">
+          </div>
           <section class="slider-description">
             <header>
               <!-- Через пвсевдоэлемент добавим номер слайдера -->
-              <h3>Делай селфи, как Бен Стиллер!</h3>
+              <h3>Делай селфи,<br>как Бен Стиллер!</h3>
             </header>
             <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a href="#" class="btn">Подробнее</a>
@@ -62,7 +64,9 @@
           </section>
         </li>
         <li class="item item-2">
-          <img src="#" alt="Картинка 2 слайдера" width="345" height="485" class="slider-img">
+          <div class="slider-img">
+            <img src="img/slider-2.png" alt="Картинка 2 слайдера" width="345" height="485" class="slider-img">
+          </div>
           <section class="slider-description">
             <header>
               <!-- Через пвсевдоэлемент добавим номер слайдера -->
@@ -81,7 +85,9 @@
           </section>
         </li>
         <li class="item item-3">
-          <img src="#" alt="Картинка 3 слайдера" width="526" height="334" class="slider-img">
+          <div class="slider-img">
+            <img src="img/slider-3.png" alt="Картинка 3 слайдера" width="526" height="334" class="slider-img">
+          </div>
           <section class="slider-description">
             <header>
               <!-- Через пвсевдоэлемент добавим номер слайдера -->

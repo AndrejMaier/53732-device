@@ -10,17 +10,19 @@
   <body>
     <header class="main-header">
       <a href="index.html" class="logo">Device</a>
-      <nav class="main-navigation">
-        <form action="#" method="get" class="site-search">
-          <input type="search" name="site-search" placeholder="Поиск по сайту">
-          <input class="btn-search" type="submit" value="Найти">
-        </form>
-        <a href="#" class="user-name">Валентин Петухов</a>
-        <a href="#" class="out">Выйти</a>
-        <a href="#" class="compare">Сравнить</a>
-        <a href="#" class="cart">Корзина</a>
+      <nav class="main-navigation inner-main-navigation">
+        <div class="wrap-flex">
+          <form action="#" method="get" class="site-search">
+            <input class="field-search" type="search" name="site-search" placeholder="Поиск по сайту">
+            <input class="btn-search" type="submit" value="Найти">
+          </form>
+          <a href="#" class="user-name">Валентин Петухов</a>
+          <a href="#" class="out">Выйти</a>
+          <a href="#" class="compare">Сравнить</a>
+          <a href="#" class="cart">Корзина</a>
+        </div>
         <ul class="site-navigation">
-          <li>
+          <li class="nav-catalog-list">
             <a href="#">Каталог товаров</a>
             <ul class="sub-site-navigation">
               <li><a href="#">Виртуальная реальность</a></li>
@@ -33,7 +35,7 @@
           </li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="nav-contact"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>     

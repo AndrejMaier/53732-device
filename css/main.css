@@ -1,27 +1,25 @@
 @font-face {
-    font-family: 'Gilroy Extra Bold';
+    font-family: 'Gilroy';
     src: url('../fonts/gilroyextrabold-webfont.woff2') format('woff2'),
          url('../fonts/gilroyextrabold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Gilroy Light';
+    font-family: 'Gilroy';
     src: url('../fonts/gilroylight-webfont.woff2') format('woff2'),
          url('../fonts/gilroylight-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
 /* font-family: 'Open Sans', Arial, sans-serif; */
-/* font-family: 'Gilroy Extra Bold', Arial, sans-serif; */
-/* font-family: 'Gilroy Light', Arial, sans-serif; */
+/* font-family: 'Gilroy', Arial, sans-serif; */
 html,
 body {
   margin: 0;
   padding: 0;
-  
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -35,7 +33,8 @@ a {
 }
 
 .main-header {
-  width: 1200px;
+  width: 1160px;
+  min-height: 300px;
   padding: 0 20px;
   padding-top: 1px;
   margin: 0 auto;
@@ -43,26 +42,41 @@ a {
   position: relative;
 }
 
+.main-navigation a:hover,
+.main-navigation a:focus,
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
 
-/* Стили логотипа */
-/* Возникла проблема при добавлении свойства "top: любое значение;" */ 
-a.logo {
-  font-family: 'Gilroy Extra Bold', Arial, sans-serif;
-  font-size: 48px;
-  line-height: normal;
-  color:#000000;
+.main-navigation a:active,
+.site-navigation a:active{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* Стили логотипа */ 
+.main-header .logo {
   position: absolute;
   left: 78px;
-  margin-top: 13px;
+  top: 13px;
+}
+
+.logo {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: normal;
+  color:#000000;
   text-transform: uppercase;
 }
 
-a.logo:hover {
+.logo:hover {
   color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
 }
 
-a.logo:active {
+.logo:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -73,9 +87,14 @@ a.logo:active {
   color: #000000;
   margin-top: 40px;
   width: 1040px;
+  min-height: 270px;
   padding-left: 60px;
   padding-right: 60px;
-  padding-top: 40px;
+  padding-top: 35px;
+}
+
+.inner-main-navigation {
+  min-height: 186px;
 }
 
 .wrap-flex {
@@ -83,15 +102,13 @@ a.logo:active {
   flex-direction: row;
   align-items: center;
 }
-
+/* Форма поиска, ссылка входа, ссылка сравнения, ссылка корзины */
 .site-search {
-  width: 441px;
-  font-size: 0;
+  flex-basis: 500px;
+  margin-right: 20px;
 }
 
-/* Вопрос по поводу кнопки сброса в поле поиска, как убрать */
-/* Вопрос EI 11 съехала кнопка, нормальное отображение при 490px*/
-.site-search input[type=search] {
+.site-search .field-search {
   background-color: #f7e296;
   background-image: url(../img/search.svg);
   background-repeat: no-repeat;
@@ -109,43 +126,154 @@ a.logo:active {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
-.site-search input[type=search]:focus {
+.site-search input[type="search"]:focus {
   outline: none;
   padding-bottom: 8px;
   border-bottom: 2px solid #000000;
 }
 
-.site-search input[type=submit] {
+.site-search .btn-search {
   padding: 8px 19px;
+  margin-left: -3px;
   border: 2px solid #000000; 
   background-color: #f7e296;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
   font-family: 'Open Sans', Arial, sans-serif;
-  opacity: 1;
+  opacity: 0;
 }
 
-input[type=search]:focus input[type=submit] {
+/* Вопрос по поводу выхода с фокуса и скрытия кнопки */
+/* В IE 11 съезжает нижний border у поля поиска */
+.site-search > .field-search:focus + .btn-search {
   opacity: 1;
+  transition: 1s;
 }
 
-.site-search input[type=submit]:hover {
+.site-search .btn-search:hover {
   background-color: #000000;
   color: #ffffff;
 }
 
-.site-search input[type=submit]:active {
+.site-search .btn-search:active {
   background-color: #000000;
   color: rgba(255, 255, 255, 0.3);
 }
 
+.user-sing,
+.user-name{
+  flex-basis: 133px;
+  flex-grow: 1;
+  padding-left: 27px;
+  margin-left: 20px;
+  position: relative;
+}
 
+.user-sing:hover::before,
+.user-name:hover::before {
+  opacity: 0.6;
+}
+
+.user-sing:active::before,
+.user-name:active::before {
+  opacity: 0.3;
+}
+
+.user-sing::before,
+.user-name::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  width: 13px;
+  height: 12px;
+  background-image: url(../img/user.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.user-name {
+  flex-basis: 133px;
+  padding-left: 27px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.user-name:hover::before {
+  opacity: 0.6;
+}
+
+.user-name:active::before {
+  opacity: 0.3;
+}
+
+.out {
+  flex-basis: 80px;
+  margin-left: 20px;
+  opacity: 0.3;
+}
+
+.main-navigation .compare {
+  flex-basis: 100px;
+  margin-left: 20px;
+  text-align: right;
+  position: relative;
+}
+
+.main-navigation .compare::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  width: 13px;
+  height: 12px;
+  background-image: url(../img/compare.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.compare:hover::before {
+  opacity: 0.6;
+}
+
+.compare:active::before {
+  opacity: 0.3;
+}
+
+.main-navigation .cart {
+  flex-basis: 100px;
+  margin-left: 20px;
+  text-align: right;
+  position: relative;
+}
+
+.main-navigation .cart::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 19px;
+  width: 13px;
+  height: 12px;
+  background-image: url(../img/cart.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cart:hover::before {
+  opacity: 0.6;
+}
+
+.cart:hover::before {
+  opacity: 0.3;
+}
+
+/* Стили основног меню */
 .site-navigation {
-  border: 1px solid red; /* временная обводка для site-navigation */
-  
+/*  border: 1px solid red;  временная обводка для site-navigation */
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 
@@ -153,38 +281,193 @@ input[type=search]:focus input[type=submit] {
 .site-navigation ul,
 .slider {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation {
+  margin-top: 26px;
 }
 
 .main-navigation a,
+inner-main-navigation a,
 .site-navigation a {
   color: #000000;
 }
 
 .site-navigation > li {
-  font-family: 'Gilroy Extra Bold', Arial, sans-serif;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-weight: 700;
   font-size: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
- ul.sub-site-navigation {
+.site-navigation > li:first-child{
+  position: relative;
+  margin-left: 0;
+}
+
+.site-navigation > li:last-child{
+  margin-right: 0;
+}
+
+.nav-catalog-list {
+  flex-basis: 216px;
+  flex-grow: 6.1;
+}
+
+.nav-contact {
+  flex-basis: 130px;
+  flex-grow: 1.6;
+  text-align: right;
+}
+
+ul.sub-site-navigation {
+  display: none; /* отключить после настройки */
+  flex-direction: column;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  height: 108px;
+  width: 1040px;
+  position: absolute;
+  top: 22px;
+  left: -60px;
+  z-index: 20;
+  padding-top: 20px;
+  padding-bottom: 34px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: #f7e296;
   font-family: 'Open Sans', Arial, sans-serif;
-   font-size: 15px;
+  font-size: 15px;
   font-weight: 300;
   line-height: 36px;
-   letter-spacing: normal;
+  letter-spacing: normal;
   text-transform: none;
 }
 
-.main-navigation a:hover,
-.main-navigation a:focus,
-.site-navigation a:hover,
-.site-navigation a:focus {
-  color: rgba(0, 0, 0, 0.6);
+.nav-catalog-list:hover ul.sub-site-navigation {
+  display: flex;
 }
 
-.main-navigation a:active,
-.site-navigation a:active{
-  color: rgba(0, 0, 0, 0.3);
+ul.sub-site-navigation li{
+  width: 200px;
+  margin-right: 40px;
 }
+
+
+
+
+/* Стилизация Слайдера */
+.slider {
+  padding-right: 60px;
+  position: relative;
+  top: -118px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.slider-img {
+  width: 560px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.slider-img img {
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.slider-description {
+  width: 500px;
+  padding-top: 40px;
+  position: relative;
+}
+
+.slider-description::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100px;
+  height: 7px;
+  background-color: black;
+}
+
+.slider-description h3 {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 47px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #000000;
+  position: relative;
+  z-index: 10;
+}
+
+.slider-description p {
+  width: 480px;
+  margin-top: -28px;
+}
+
+.item-1 h3::after {
+  content: "01";
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 179px;
+  font-weight: 700;
+  color: #ffffff;
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  width: auto;
+  height: auto;
+  z-index: -10;
+}
+
+.item-2 h3::after {
+  content: "02";
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 179px;
+  font-weight: 700;
+  color: #ffffff;
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  width: auto;
+  height: auto;
+  z-index: -10;
+}
+
+.item-3 h3::after {
+  content: "03";
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 179px;
+  font-weight: 700;
+  color: #ffffff;
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  width: auto;
+  height: auto;
+  z-index: -10;
+}
+
+.item-active {
+  display: flex;
+}
+
+
+
+
 
