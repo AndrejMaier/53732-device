@@ -87,7 +87,7 @@ a {
   color: #000000;
   margin-top: 40px;
   width: 1040px;
-  min-height: 270px;
+  min-height: 260px;
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 35px;
@@ -112,7 +112,7 @@ a {
   background-color: #f7e296;
   background-image: url(../img/search.svg);
   background-repeat: no-repeat;
-  background-position: 3px 16px;
+  background-position: 2px 17px;
   color: rgba(0, 0, 0, 0.3);
   width: 355px;
   padding-top: 10px;
@@ -319,6 +319,15 @@ inner-main-navigation a,
   flex-grow: 6.1;
 }
 
+.nav-catalog-list .catalog-deko::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/plus-sign.png);
+  background-repeat: no-repeat;
+  
+}
+
 .nav-contact {
   flex-basis: 130px;
   flex-grow: 1.6;
@@ -369,7 +378,7 @@ ul.sub-site-navigation li{
 }
 
 .item {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -416,11 +425,6 @@ ul.sub-site-navigation li{
   z-index: 10;
 }
 
-.slider-description p {
-  width: 480px;
-  margin-top: -28px;
-}
-
 .item-1 h3::after {
   content: "01";
   font-family: 'Gilroy', Arial, sans-serif;
@@ -463,6 +467,12 @@ ul.sub-site-navigation li{
   z-index: -10;
 }
 
+.slider-description p {
+  width: 480px;
+  margin-top: -28px;
+  margin-bottom: 44px;
+}
+
 .btn {
   display: inline-block;
   padding-top: 8px;
@@ -487,7 +497,6 @@ ul.sub-site-navigation li{
   transition-property: background;
   transition-timing-function: ease-in-out;
   transition-delay: 0.5s;
-  
 }
 
 .btn:active {
@@ -498,11 +507,95 @@ ul.sub-site-navigation li{
   width: 220px;
 }
 
+.technical-parameters {
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+
+.technical-parameters td {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 48px;
+  padding: 0;
+  padding-right: 75px;
+}
+
+.technical-parameters th {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+}
+
 .item-active {
   display: flex;
 }
 
+/* Переключатели слайдера */
+.slider-navigation {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 80px;
+  bottom: 270px;
+}
+
+.slider-switch {
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-image: url(../img/slider-switch.svg);
+  background-size: contain;
+}
+
+.slider-switch.active {
+  background-image: url(../img/slider-switch-active.svg);
+}
 
 
+/* Стили подвала */
+.main-footer {
+  background-color: #464646;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #ffffff;
+}
 
+.main-footer a {
+  color: #ffffff;
+}
+
+.container-center {
+  width: 1160px;
+  padding: 30px 20px;
+  margin: 0 auto;
+}
+
+.main-footer .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-footer .logo {
+  color: #ffc600;
+  margin-right: auto;
+}
+
+.main-footer .logo::after {
+}
+
+.main-footer .logo:hover {
+  color: rgba(255, 198, 0, 0.6);
+}
+
+.main-footer .user-sing {
+  flex-basis: 0;
+  flex-grow: 0;
+}
+
+.main-footer .user-sing::before {
+  background-image: url(../img/user.svg);
+}
 
