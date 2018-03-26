@@ -403,7 +403,7 @@ ul.sub-site-navigation li{
   left: 0;
   width: 100px;
   height: 7px;
-  background-color: black;
+  background-color: #ffffff;
 }
 
 .slider-description h3 {
@@ -461,6 +461,41 @@ ul.sub-site-navigation li{
   width: auto;
   height: auto;
   z-index: -10;
+}
+
+.btn {
+  display: inline-block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  background-image: url(../img/line-btn.png);
+  background-position: center;
+  background-repeat: repeat-x;
+  background-color: none;
+}
+
+.btn:hover {
+  background-color: #f0c52e;
+  transition-duration: 1s;
+  transition-property: background;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.5s;
+  
+}
+
+.btn:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-slider {
+  width: 220px;
 }
 
 .item-active {
