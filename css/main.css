@@ -571,8 +571,6 @@ ul.sub-site-navigation li:last-child {
 /* Стили подвала */
 .main-footer {
   background-color: #464646;
-  padding-top: 30px;
-  padding-bottom: 30px;
   color: #ffffff;
 }
 
@@ -590,8 +588,12 @@ ul.sub-site-navigation li:last-child {
 
 .container-center {
   width: 1160px;
-  padding: 30px 20px;
+  padding: 60px 20px;
   margin: 0 auto;
+}
+
+.main-footer .container-center {
+  background-color: #464646;
 }
 
 .main-footer .row {
@@ -1309,6 +1311,56 @@ dt.active a.btn-active:active {
   margin: 0 auto;
 }
 
+.title-main h1 {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 47px;
+  line-height: 48px;
+  color: #000000;
+  margin-top: 1px;
+  margin-bottom: 21spx;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.breadcrumbs li {
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs li::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background-image: url(../img/breadcrumbs-deco.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 13px;
+  right: -20px;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.link-disabled::after {
+  display: none;
+}
+
+.breadcrumbs a,
+.link-disabled {
+  opacity: 0.3;
+  font-size: 14px;
+}
 
 
 .perfect-pixel {
