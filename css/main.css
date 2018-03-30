@@ -1358,10 +1358,262 @@ dt.active a.btn-active:active {
 
 .breadcrumbs a,
 .link-disabled {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
   font-size: 14px;
 }
 
+.breadcrumbs a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-content: flex-end;
+  width: 32.5%;
+  min-width: 348px;
+  background-color: #eeeeee;
+}
+
+.column-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 67.5%;
+}
+
+
+/* Стили фильтра */
+.filter {
+  width: 268px;
+  padding-left: 60px;
+  background-color: #dbdbdb;
+  position: relative;
+}
+
+.filter::before {
+  content: "";
+  background-color: #dbdbdb;
+  width: 3000px;
+  min-height: 50.53px;
+  position: absolute;
+  left: -3000px;
+}
+
+.filter h2 {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 24px;
+  letter-spacing: 2px;
+  width: 268px;
+  word-wrap: break-word;
+}
+
+.filter-forms {
+  width: 200px;
+  padding:  70px 68px 70px 60px;
+  background-color: #eeeeee;
+  position: relative;
+  z-index: 1;
+}
+
+.filter-forms fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 35px;
+}
+
+.filter-forms legend {
+  width: 200px;
+  border-top: 2px solid #000000;
+  font-family: 'Gilroy', Arial, sans-serif; 
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 0;
+}
+
+.btn-filter-forms {
+  border: 0;
+  background-color: transparent;
+  width: 200px;
+  margin-top: 15px;
+}
+
+.cost-filter {
+  width: 200px;
+  height: 2px;
+  margin-top: 22px;
+  margin-bottom: 33px;
+  background-color: #dbdbdb;
+  position: relative;
+}
+
+.line-cost-active {
+  width: 110px;
+  height: 2px;
+  left: 0;
+  background-color: #91c92f;
+  position: absolute;
+  z-index: 1;
+}
+
+.cost-min {
+  width: 20px;
+  height: 22px;
+  background-image: url(../img/filter-range.svg);
+  position: absolute;
+  top: -9px;
+  left: -9px;
+  z-index: 2;
+}
+
+.cost-max {
+  width: 20px;
+  height: 22px;
+  background-image: url(../img/filter-range.svg);
+  position: absolute;
+  top: -9px;
+  right: 80px;
+  z-index: 2;
+}
+
+.cost-min:active {
+  width: 22px;
+  height: 24px;
+  background-size: cover;
+  top: -10px;
+  left: -10px;
+}
+
+.cost-max:active {
+  width: 22px;
+  height: 24px;
+  background-size: cover;
+  top: -10px;
+  right: 79px;
+}
+
+.cost-output {
+  font-family: 'Gilroy', Arial, sans-serif; 
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0,0,0,0.2);
+  position: absolute;
+  top: 12px;
+}
+
+.cost-min-output {
+  left: 0;
+}
+
+.cost-max-output {
+  right: 60px;
+}
+
+.label-color-checkbox {
+  display: inline-block;
+  width: 200px;
+  position: relative;
+  font-size: 14px;
+  line-height: 40px;
+  margin-top: 13px;
+}
+
+.color-checkbox {
+  margin-right: 28px;
+  opacity: 0;
+}
+
+.color-checkbox + span {
+  width: 27px;
+  height: 23px;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+}
+
+.color-checkbox:hover + span {
+  opacity: 0.6;
+}
+
+.color-checkbox:active + span {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.color-checkbox:checked + span {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.color-checkbox:checked:hover + span {
+  opacity: 0.6;
+}
+
+.color-checkbox:checked:active + span {
+  background-image: url(../img/checkbox-off.svg);
+}
+
+.label-bluetooth-radio {
+  display: inline-block;
+  width: 200px;
+  position: relative;
+  font-size: 14px;
+  line-height: 40px;
+  margin-top: 13px;
+}
+
+.bluetooth-radio {
+  margin-right: 28px;
+  opacity: 0;
+}
+
+.bluetooth-radio + span {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  background-image: url(../img/radio-off.svg);
+  background-repeat: no-repeat;
+}
+
+.bluetooth-radio:hover + span {
+  opacity: 0.6;
+}
+
+.bluetooth-radio:active + span {
+  background-image: url(../img/radio-on.svg);
+}
+
+.bluetooth-radio:checked + span {
+  background-image: url(../img/radio-on.svg);
+}
+
+.bluetooth-radio:checked:hover + span {
+  opacity: 0.6;
+}
+
+.bluetooth-radio:checked:active + span {
+  background-image: url(../img/radio-off.svg);
+}
 
 .perfect-pixel {
   display: none;
