@@ -76,48 +76,66 @@
             <fieldset>
               <legend>Bluetooth</legend>
               <label class="label-bluetooth-radio"><input type="radio" name="bluetooth" value="on" id="bluetooth_yes" class="bluetooth-radio" checked><span></span>Есть</label>
-              <label class="label-bluetooth-radio"><input type="radio" name="bluetooth" value="off" id="bluetooth_no" class="bluetooth-radio"><span></span>Нет</label>
+              <label class="label-bluetooth-radio"><input type="radio" name="bluetooth" value="off" id="bluetooth_no" class="bluetooth-radio" disabled><span></span>Нет</label>
             </fieldset>
             <input type="submit" value="Показать" class="btn btn-filter-forms">
           </form>
         </div>
         <div class="column-right">
           <section class="sort">
-            <h2>Сортировка</h2>
-            <a href="#" class="active">По цене</a>
-            <a href="#">По типу</a>
-            <a href="#">По популярности</a>
-            <a href="" class="triangle triangle-ascending active">По возрастанию</a>
-            <a href="" class="triangle triangle-downward">По убыванию</a>
+            <div class="sort-wrapper">
+              <h2>Сортировка</h2>
+              <a href="#" class="sort-price active">По цене</a>
+              <a href="#" class="sort-type">По типу</a>
+              <a href="#" class="sort-popular">По популярности</a>
+              <a href="" class="triangle triangle-ascending active"></a>
+              <a href="" class="triangle triangle-downward"></a>
+            </div>
           </section>
           <section class="product-overview">
             <article class="product-overview-item">
-              <img src="#" alt="Картинка товара">
-              <a href="#" class="btn">В корзину</a>
-              <a href="#" class="compare">Добавить к сравнению</a>
-              <h3><a href="#" class="title-product">Любительская селфи-палка</a></h3>
-              <p>500 руб.</p>
+              <img src="img/product-1.jpg" width="360" alt="Картинка товара" class="card-product-img">
+              <div class="back-card">
+                <a href="#" class="btn btn-card">В корзину</a>
+                <a href="#" class="btn-compare">Добавить к сравнению</a>
+              </div>
+              <div class="title-product-box">
+                <h3><a href="#" class="title-product">Любительская селфи-палка</a></h3>
+                <p>500 руб.</p>
+              </div>
             </article>
             <article class="product-overview-item">
-              <img src="#" alt="Картинка товара">
-              <a href="#" class="btn">В корзину</a>
-              <a href="#" class="compare">Добавить к сравнению</a>
-              <h3><a href="#" class="title-product">Профессиональная селфи-палка</a></h3>
-              <p>1500 руб.</p>
+              <img src="img/product-2.jpg" width="360" alt="Картинка товара" class="card-product-img">
+              <div class="back-card">
+                <a href="#" class="btn btn-card">В корзину</a>
+                <a href="#" class="btn-compare">Добавить к сравнению</a>
+              </div>
+              <div class="title-product-box">
+                <h3><a href="#" class="title-product" class="title-product">Профессиональная селфи-палка</a></h3>
+                <p>1 500 руб.</p>
+              </div>
             </article>
             <article class="product-overview-item">
-              <img src="#" alt="Картинка товара">
-              <a href="#" class="btn">В корзину</a>
-              <a href="#" class="compare">Добавить к сравнению</a>
-              <h3><a href="#" class="title-product">Непотопляемая селфи-палка</a></h3>
-              <p>2500 руб.</p>
+              <img src="img/product-3.jpg" width="360" alt="Картинка товара" class="card-product-img">
+              <div class="back-card">
+                <a href="#" class="btn btn-card">В корзину</a>
+                <a href="#" class="btn-compare">Добавить к сравнению</a>
+              </div>
+              <div class="title-product-box">
+                <h3><a href="#" class="title-product">Непотопляемая селфи-палка</a></h3>
+                <p>2 500 руб.</p>
+              </div>
             </article>
-            <article class="product-overview-item">
-              <img src="#" alt="Картинка товара">
-              <a href="#" class="btn">В корзину</a>
-              <a href="#" class="compare">Добавить к сравнению</a>
-              <h3><a href="#" class="title-product">Селфи-палка «Следуй за мной»</a></h3>
-              <p>4900 руб.</p>
+            <article class="product-overview-item new">
+              <img src="img/product-4.jpg" width="360" alt="Картинка товара" class="card-product-img">
+              <div class="back-card">
+                <a href="#" class="btn btn-card">В корзину</a>
+                <a href="#" class="btn-compare">Добавить к сравнению</a>
+              </div>
+              <div class="title-product-box">
+                <h3><a href="#" class="title-product">Селфи-палка «Следуй за мной»</a></h3>
+                <p>4 900 руб.</p>
+              </div>
             </article>
           </section>
           <ul class="pagination">
