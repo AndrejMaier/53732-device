@@ -2495,6 +2495,9 @@ a.triangle-ascending {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.modal-show {
+  display: block;
+}
 
 .perfect-pixel {
   display: none;
