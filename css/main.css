@@ -2063,6 +2063,10 @@ a.triangle-ascending {
   display: block;
 }
 
+iframe {
+  border: none;
+}
+
 .perfect-pixel {
   display: block;
   position: absolute;
