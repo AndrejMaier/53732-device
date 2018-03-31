@@ -95,7 +95,7 @@ a {
 }
 
 .inner-main-navigation {
-  min-height: 186px;
+  min-height: 151px;
 }
 
 .wrap-flex {
@@ -1961,6 +1961,9 @@ dt.active a.btn-active:active {
 
 
 /* Содержание страницы каталога */
+.inner-main {
+  margin-top: -36px;
+}
 .inner-wrap {
   padding-right: 20px;
   padding-left: 20px;
