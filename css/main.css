@@ -58,8 +58,8 @@ a {
 /* Стили логотипа */ 
 .main-header .logo {
   position: absolute;
-  left: 78px;
-  top: 13px;
+  left: 77px;
+  top: 14px;
 }
 
 .logo {
@@ -69,6 +69,7 @@ a {
   line-height: normal;
   color:#000000;
   text-transform: uppercase;
+  letter-spacing: 0.85px;
 }
 
 .logo:hover {
@@ -87,7 +88,7 @@ a {
   color: #000000;
   margin-top: 40px;
   width: 1040px;
-  min-height: 261px;
+  min-height: 264px;
   padding-left: 60px;
   padding-right: 60px;
   padding-top: 35px;
@@ -265,7 +266,7 @@ a {
 .main-navigation .cart {
   -ms-flex-preferred-size: 100px;
       flex-basis: 100px;
-  margin-left: 25px;
+  margin-left: 24px;
   text-align: right;
   position: relative;
 }
@@ -274,7 +275,7 @@ a {
   content: "";
   position: absolute;
   top: 9px;
-  left: 19px;
+  left: 16px;
   width: 13px;
   height: 12px;
   background-image: url(../img/cart.svg);
@@ -367,6 +368,10 @@ li.nav-catalog-list {
   
 }
 
+.nav-warranty {
+  margin-left: -3px;
+}
+
 .nav-contact {
   -ms-flex-preferred-size: 130px;
       flex-basis: 130px;
@@ -374,6 +379,7 @@ li.nav-catalog-list {
       -ms-flex-positive: 1.6;
           flex-grow: 1.6;
   text-align: right;
+  letter-spacing: 3.4px;
 }
 
 ul.sub-site-navigation {
@@ -426,7 +432,7 @@ ul.sub-site-navigation li:last-child {
 .slider {
   padding-right: 60px;
   position: relative;
-  top: -118px;
+  top: -121px;
 }
 
 .item {
@@ -484,6 +490,7 @@ ul.sub-site-navigation li:last-child {
   font-size: 47px;
   font-weight: 700;
   line-height: 56px;
+  letter-spacing: 0.6px;
   margin-top: 50px;
   margin-bottom: 45px;
   color: #000000;
@@ -534,9 +541,10 @@ ul.sub-site-navigation li:last-child {
 }
 
 .slider-description p {
-  width: 480px;
-  margin-top: -28px;
+  width: 481px;
+  margin-top: -27px;
   margin-bottom: 44px;
+  letter-spacing: 0.16px;
 }
 
 .btn {
@@ -592,10 +600,22 @@ ul.sub-site-navigation li:last-child {
   padding-right: 75px;
 }
 
+.technical-parameters .slider-1-first-column {
+  padding-right: 78px;
+}
+
+.technical-parameters .slider-1-second-column {
+  padding-right: 80px;
+}
+
+.technical-parameters .slider-1-third-column {
+  padding-right: 60px;
+}
+
 .technical-parameters th {
   font-weight: 300;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 30px;
 }
 
 .item-active {
@@ -614,8 +634,8 @@ ul.sub-site-navigation li:last-child {
       -ms-flex-direction: row;
           flex-direction: row;
   position: absolute;
-  right: 80px;
-  bottom: 270px;
+  right: 94px;
+  bottom: 272px;
 }
 
 .slider-switch {
@@ -1199,17 +1219,21 @@ ul.sub-site-navigation li:last-child {
 
 .main-footer .container-center {
   background-color: #464646;
+  padding-bottom: 63px;
+  margin-top: 0;
 }
 
 .main-footer .row {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .main-footer .logo {
   color: #ffc600;
   margin-right: auto;
+  line-height: 49px;
+  margin-left: -5px;
 }
 
 .main-footer .logo::after {
@@ -1226,24 +1250,28 @@ ul.sub-site-navigation li:last-child {
 .main-footer .user-sing,
 .main-footer .user-name {
   flex-grow: 0;
+  padding-top: 3px;
 }
 
 .main-footer .user-sing::before,
 .main-footer .user-name:before {
+  content: "";
   background-image: url(../img/user-yellow.svg);
+  top: 12px;
 }
 
 .main-footer .compare {
   padding-left: 27px;
-  margin-left: 20px;
+  padding-top: 3px;
+  margin-left: 37px;
   position: relative;
 }
 
 .main-footer .compare::before {
   content: "";
   position: absolute;
-  top: 9px;
-  left: 6px;
+  top: 12px;
+  left: 4px;
   width: 13px;
   height: 12px;
   background-image: url(../img/compare-yellow.svg);
@@ -1253,15 +1281,16 @@ ul.sub-site-navigation li:last-child {
 
 .main-footer .cart {
   padding-left: 27px;
-  margin-left: 20px;
+  padding-top: 3px;
+  margin-left: 37px;
   position: relative;
 }
 
 .main-footer .cart::before {
   content: "";
   position: absolute;
-  top: 9px;
-  left: 6px;
+  top: 12px;
+  left: 3px;
   width: 13px;
   height: 12px;
   background-image: url(../img/cart-yellow.svg);
@@ -1271,9 +1300,19 @@ ul.sub-site-navigation li:last-child {
 
 .main-footer .row-middle {
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 9px;
+  align-items: center;
 }
 
+.service-footer {
+  width: 440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-right: 56px;
+}
 .service-footer a {
   text-transform: uppercase;
   font-family: 'Gilroy', Arial, sans-serif;
@@ -1292,6 +1331,7 @@ ul.sub-site-navigation li:last-child {
 .line-footer-deko {
   width: 80px;
   height: 7px;
+  margin-top: 12px;
   margin-right: -10px;
   background-color: #ffc600;
 }
@@ -1302,6 +1342,7 @@ ul.sub-site-navigation li:last-child {
   justify-content: space-between;
   align-items: center;
   font-size: 0;
+  margin-right: 43px;
 }
 .main-footer .social-btn {
   width: 33px;
@@ -1355,7 +1396,7 @@ ul.sub-site-navigation li:last-child {
 .popular-product-category {
   width: 1200px;
   margin: 0 auto;
-  margin-top: -29px;
+  margin-top: -33px;
 }
 
 .popular-product-category .popular-product-category-list {
@@ -1388,11 +1429,12 @@ ul.sub-site-navigation li:last-child {
   background-color: rgba(240, 197, 46, 0.5);
   background-position: center ;
   background-repeat: no-repeat;
-  margin-bottom: 29px;
+  margin-bottom: 33px;
 }
 
 .popular-product-category-item .vr {
   background-image: url(../img/vr.svg);
+  background-position: 50% 49%;
 }
 
 .popular-product-category-item .vr:active {
@@ -1401,7 +1443,7 @@ ul.sub-site-navigation li:last-child {
 
 .popular-product-category-item .selfie-stick {
   background-image: url(../img/monopod.svg);
-  background-position: center 100%;
+  background-position: center 92%;
 }
 
 .popular-product-category-item .selfie-stick:active {
@@ -1410,6 +1452,7 @@ ul.sub-site-navigation li:last-child {
 
 .popular-product-category-item .action-camera {
   background-image: url(../img/action-camera.svg);
+  background-position: 55% 51%;
 }
 
 .popular-product-category-item .action-camera:active {
@@ -1418,6 +1461,7 @@ ul.sub-site-navigation li:last-child {
 
 .popular-product-category-item .fitness-bracelet {
   background-image: url(../img/fitness-bracelet.svg);
+  background-position: 52% 52%;
 }
 
 .popular-product-category-item .fitness-bracelet:active {
@@ -1426,6 +1470,7 @@ ul.sub-site-navigation li:last-child {
 
 .popular-product-category-item .smart-watch {
   background-image: url(../img/smart-watch.svg);
+  background-position: 53% 52%;
 }
 
 .popular-product-category-item .smart-watch:active {
@@ -1434,6 +1479,7 @@ ul.sub-site-navigation li:last-child {
 
 .popular-product-category-item .quadrocopter {
   background-image: url(../img/quadrocopter.svg);
+  background-position: 48% 53%;
 }
 
 .popular-product-category-item .quadrocopter:active {
@@ -1457,8 +1503,9 @@ ul.sub-site-navigation li:last-child {
 
 /* Услуги  */
 .service {
+  min-width: 1200px;
   min-height: 309px;
-  margin-top: 83px;
+  margin-top: 79px;
   padding-bottom: 57px;
   position: relative;
   z-index: 1;
@@ -1534,6 +1581,7 @@ dt.active a.btn-active:active {
   padding-left: 115px;
   padding-top: 80px;
   padding-bottom: 62px;
+  letter-spacing: 0.3px;
 }
 
 .service-item::after {
@@ -1542,7 +1590,7 @@ dt.active a.btn-active:active {
   height: 260px;
   position: absolute;
   right: -297px;
-  top: 11%;
+  top: 12%;
   background-position: center;
   z-index: 1;
 }
@@ -1570,6 +1618,7 @@ dt.active a.btn-active:active {
   font-weight: 700;
   font-size: 47px;
   line-height: 48px;
+  letter-spacing: 1.2px;
   color: #000000;
 }
 
@@ -1678,13 +1727,15 @@ dt.active a.btn-active:active {
 /* Блок "О нас", блок "Контакты" */
 .start-flex {
   align-items: flex-start;
-  margin-top: -19px;
+  margin-top: -51px;
+  padding-bottom: 30px;
 }
 
 .about-us {
   width: 560px;
   margin-right: 20px;
   padding-bottom: 51px;
+  padding-top: 3px;
 }
 
 .about-us h2 {
@@ -1702,7 +1753,7 @@ dt.active a.btn-active:active {
   width: 80px;
   height: 7px;
   background-color: #000000;
-  top: -50px;
+  top: -54px;
   left: 0;
   position: absolute;
   z-index: 1;
@@ -1712,6 +1763,7 @@ dt.active a.btn-active:active {
   width: 475px;
   margin-top: 30px;
   margin-bottom: 30px;
+  letter-spacing: 0.05px;
 }
 
 .delivery-service {
@@ -1755,7 +1807,8 @@ dt.active a.btn-active:active {
   font-family: 'Gilroy', Arial, sans-serif;
   font-weight: 700;
   font-size: 47px;
-  line-height: 48px;
+  padding-top: 5px;
+  line-height: 43px;
   color: #000000;
   margin-bottom: 40px;
   position: relative;
@@ -1775,6 +1828,8 @@ dt.active a.btn-active:active {
 .contacts p {
   margin-top: 30px;
   margin-bottom: 40px; 
+  padding-top: 4px;
+  letter-spacing: 0.05px;
 }
 
 .contacts .contacts-map {
@@ -1783,7 +1838,8 @@ dt.active a.btn-active:active {
 
 .btn-contacts {
   width: 259px;
-  margin-top: 55px;
+  margin-top: 53px;
+  letter-spacing: 3.3px;
 }
 
 
@@ -1891,6 +1947,7 @@ dt.active a.btn-active:active {
   margin-top: 40px;
   width: 200px;
   border: 0;
+  background-color: transparent;
 }
 
 .modal-map {
@@ -2500,7 +2557,7 @@ a.triangle-ascending {
 }
 
 .perfect-pixel {
-  display: none;
+  display: block;
   position: absolute;
   top: 0;
   z-index: 100;
@@ -2508,7 +2565,7 @@ a.triangle-ascending {
   width: 100%;
   height: 3000px;
   opacity: 0.5;
-  background-image: url(../device-index.jpg);
+  background-image: url(../device-catalog.jpg);
   background-repeat: no-repeat;
   background-position: top center;
 }
