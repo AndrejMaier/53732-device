@@ -1267,6 +1267,10 @@ ul.sub-site-navigation li:last-child {
   position: relative;
 }
 
+.main-footer .inner-compare {
+  margin-left: 2px;
+}
+
 .main-footer .compare::before {
   content: "";
   position: absolute;
@@ -1984,7 +1988,7 @@ dt.active a.btn-active:active {
   color: #000000;
   margin-top: 1px;
   margin-bottom: 18px;
-  letter-spacing: 0.6;
+  letter-spacing: 0.6px;
 }
 
 .breadcrumbs {
@@ -1994,12 +1998,12 @@ dt.active a.btn-active:active {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 49px;
 }
 
 .breadcrumbs li {
   position: relative;
-  margin-right: 40px;
+  margin-right: 39px;
 }
 
 .breadcrumbs li::after {
@@ -2040,6 +2044,7 @@ dt.active a.btn-active:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: -5px
 }
 
 .column-left {
@@ -2047,7 +2052,7 @@ dt.active a.btn-active:active {
   flex-direction: column;
   align-items: flex-end;
   align-content: flex-end;
-  width: 32.5%;
+  width: calc(50% - 252px);
   min-width: 348px;
   background-color: #eeeeee;
   color: #000000;
@@ -2058,7 +2063,7 @@ dt.active a.btn-active:active {
   flex-direction: column;
   align-items: flex-start;
   align-content: flex-start;
-  width: 67.5%;
+  width: calc(50% + 252px);;
   color: #000000;
 }
 
@@ -2075,7 +2080,7 @@ dt.active a.btn-active:active {
   content: "";
   background-color: #dbdbdb;
   width: 3000px;
-  min-height: 50.53px;
+  min-height: 67px;
   position: absolute;
   left: -3000px;
 }
@@ -2085,8 +2090,8 @@ dt.active a.btn-active:active {
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
-  line-height: 24px;
-  letter-spacing: 2px;
+  line-height: 40px;
+  letter-spacing: 3.9px;
   width: 268px;
   word-wrap: break-word;
 }
@@ -2112,7 +2117,7 @@ dt.active a.btn-active:active {
   font-family: 'Gilroy', Arial, sans-serif; 
   font-weight: 700;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 23px;
   padding: 12px 0;
 }
 
@@ -2120,7 +2125,7 @@ dt.active a.btn-active:active {
   border: 0;
   background-color: transparent;
   width: 200px;
-  margin-top: 15px;
+  margin-top: 3px;
 }
 
 .cost-filter {
@@ -2165,16 +2170,15 @@ dt.active a.btn-active:active {
   width: 22px;
   height: 24px;
   background-size: cover;
-  top: -10px;
-  left: -10px;
+  transform: translate(1px, -1px);
 }
 
 .cost-max:active {
   width: 22px;
   height: 24px;
   background-size: cover;
-  top: -10px;
-  right: 79px;
+  transform: translate(1px, -1px);
+
 }
 
 .cost-output {
@@ -2200,12 +2204,12 @@ dt.active a.btn-active:active {
   width: 200px;
   position: relative;
   font-size: 14px;
-  line-height: 40px;
-  margin-top: 13px;
+  line-height: 35px;
+  margin-top: 5px;
 }
 
 .color-checkbox {
-  margin-right: 28px;
+  margin-right: 24px;
   opacity: 0;
 }
 
@@ -2213,7 +2217,7 @@ dt.active a.btn-active:active {
   width: 27px;
   height: 23px;
   position: absolute;
-  left: 0;
+  left: -2px;
   top: 8px;
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
@@ -2256,12 +2260,12 @@ dt.active a.btn-active:active {
   width: 200px;
   position: relative;
   font-size: 14px;
-  line-height: 40px;
-  margin-top: 13px;
+  line-height: 29px;
+  margin-top: 11px;
 }
 
 .bluetooth-radio {
-  margin-right: 28px;
+  margin-right: 24px;
   opacity: 0;
 }
 
@@ -2269,8 +2273,8 @@ dt.active a.btn-active:active {
   width: 25px;
   height: 25px;
   position: absolute;
-  left: 0;
-  top: 7px;
+  left: -3px;
+  top: 2px;
   background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
 }
@@ -2333,8 +2337,8 @@ dt.active a.btn-active:active {
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
-  line-height: 24px;
-  letter-spacing: 2px;
+  line-height: 41px;
+  letter-spacing: 3.5px;
   max-width: 268px;
   width: 185px;
   word-wrap: break-word;
@@ -2346,7 +2350,7 @@ dt.active a.btn-active:active {
   line-height: 18px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
-  margin-left: 15px;
+  margin-left: -202px;
   margin-right: 15px;
 }
 
@@ -2354,10 +2358,18 @@ dt.active a.btn-active:active {
   color: rgba(0, 0, 0, 1);
 }
 
-.triangle {
+.sort .triangle-wrap {
+  width: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sort .triangle {
   width: 11px;
   height: 10px;
   margin-left: 19px;
+  margin-right: 0;
   opacity: 0.2;
 }
 
@@ -2393,18 +2405,18 @@ a.triangle-ascending {
 .product-overview-item {
   position: relative;
   width: 360px;
-  margin-bottom: 45px;
+  margin-bottom: 27px;
 }
 
 .new::after {
   content: "New";
-  width: 61px;
-  height: 61px;
+  width: 56px;
+  height: 56px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   color: rgba(0, 0, 0, 0.2);
   position: absolute;
-  top: 30px;
+  top: 28px;
   right: 27px;
   z-index: 2;
   display: flex;
@@ -2488,10 +2500,13 @@ a.triangle-ascending {
   font-size: 16px;
   line-height: 24px;
   color: #464646;
+  width: 90px;
+  text-align: right;
+  letter-spacing: 0.4px;
 }
 
 .pagination {
-  margin: 0;
+  margin-top: -10px;
   margin-left: 72px;
   margin-right: 20px;
   margin-bottom: 77px;
@@ -2540,6 +2555,10 @@ a.triangle-ascending {
   padding: 23px 30px;
 }
 
+.pagination-item:nth-child(4) {
+  margin-left: 10px;
+}
+
 .pagination-item:last-child a {
   color: rgba(0, 0, 0, 1);
 }
@@ -2561,7 +2580,7 @@ a.triangle-ascending {
 }
 
 .perfect-pixel {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   z-index: 100;
