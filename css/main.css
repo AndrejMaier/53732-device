@@ -54,7 +54,6 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-
 /* Стили логотипа */ 
 .main-header .logo {
   position: absolute;
@@ -80,7 +79,6 @@ a {
 .logo:active {
   color: rgba(0, 0, 0, 0.3);
 }
-
 
 /* Стили основной навигации сайта */
 .main-navigation {
@@ -111,6 +109,7 @@ a {
           align-items: center;
   margin-top: -2px;
 }
+
 /* Форма поиска, ссылка входа, ссылка сравнения, ссылка корзины */
 .site-search {
   -ms-flex-preferred-size: 500px;
@@ -293,7 +292,6 @@ a {
 
 /* Стили основног меню */
 .site-navigation {
-/*  border: 1px solid red;  временная обводка для site-navigation */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,7 +303,6 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 
 .site-navigation,
 .site-navigation ul,
@@ -347,9 +344,8 @@ inner-main-navigation a,
 li.nav-catalog-list {
   width: 250px;
   margin-right: 270px;
-  /*flex-basis: 216px;*/
-  /*flex-grow: 6.1;*/
 }
+
 .catalog-deco {
   position: relative;
   padding-right: 34px;
@@ -365,7 +361,6 @@ li.nav-catalog-list {
   height: 16px;
   background-image: url(../img/plus-sign.png);
   background-repeat: no-repeat;
-  
 }
 
 .nav-warranty {
@@ -425,8 +420,6 @@ ul.sub-site-navigation li{
 ul.sub-site-navigation li:last-child {
   margin-bottom: 20px;
 }
-
-
 
 /* Стилизация Слайдера */
 .slider {
@@ -549,6 +542,7 @@ ul.sub-site-navigation li:last-child {
 
 .btn {
   display: inline-block;
+  vertical-align: middle;
   padding-top: 8px;
   padding-bottom: 8px;
   font-family: 'Gilroy', Arial, sans-serif;
@@ -694,9 +688,6 @@ ul.sub-site-navigation li:last-child {
   margin-left: -5px;
 }
 
-.main-footer .logo::after {
-}
-
 .main-footer .logo:hover {
   color: rgba(255, 198, 0, 0.6);
 }
@@ -767,13 +758,15 @@ ul.sub-site-navigation li:last-child {
 }
 
 .service-footer {
-  width: 440px;
+  width: 457px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
   padding-left: 8px;
   padding-right: 8px;
-  margin-right: 56px;
+  margin-right: 38px;
 }
 .service-footer a {
   text-transform: uppercase;
@@ -835,8 +828,6 @@ ul.sub-site-navigation li:last-child {
   background-repeat: no-repeat;
 }
 
-
-
 .logo-developer {
   font-size: 0;
   width: 27px;
@@ -851,7 +842,6 @@ ul.sub-site-navigation li:last-child {
 .logo-developer:active {
   opacity: 0.3;
 }
-
 
 /* Стили основного содержания страницы */
 /* Список популярных категорий товаров */
@@ -962,7 +952,6 @@ ul.sub-site-navigation li:last-child {
   color: rgba(0, 0, 0, 0.3);
 }
 
-
 /* Услуги  */
 .service {
   min-width: 1200px;
@@ -986,7 +975,6 @@ ul.sub-site-navigation li:last-child {
 }
 
 .service-list {
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1012,6 +1000,7 @@ ul.sub-site-navigation li:last-child {
 
 dt.active a.btn-active {
   display: inline-block;
+  vertical-align: middle;
   padding-top: 8px;
   padding-bottom: 8px;
   font-family: 'Gilroy', Arial, sans-serif;
@@ -1086,6 +1075,7 @@ dt.active a.btn-active:active {
 
 .service-list dd.service-item-active {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .service-list dd::before {
@@ -1098,8 +1088,6 @@ dt.active a.btn-active:active {
   background-color: #000000;
 }
 
-
-
 .btn-service {
   width: 160px;
 }
@@ -1111,7 +1099,6 @@ dt.active a.btn-active:active {
   color: #f7e184;
   transition-property: none;
 }
-
 
 /* Список компаний-партнеров */
 .company {
@@ -1140,6 +1127,7 @@ dt.active a.btn-active:active {
 
 .company-list a {
   display: inline-block;
+  vertical-align: middle;
   font-size: 0;
   width: 260px;
   height: 100px;
@@ -1152,8 +1140,7 @@ dt.active a.btn-active:active {
 
 .djl:hover {
   background-image: url(../img/company-djl-hover.jpg);
-  opacity: 1;
-  
+  opacity: 1;  
 }
 
 .sp-gadgets {
@@ -1304,9 +1291,6 @@ dt.active a.btn-active:active {
   letter-spacing: 3.3px;
 }
 
-
-
-
 /* Стили модальных окон */
 /* Стили модального окна "Написать нам" */
 .modal {
@@ -1421,7 +1405,6 @@ dt.active a.btn-active:active {
   margin-left: -480px;
 }
 
-
 /* Содержание страницы каталога */
 .inner-main {
   margin-top: -36px;
@@ -1525,7 +1508,6 @@ dt.active a.btn-active:active {
   color: #000000;
 }
 
-
 /* Стили фильтра */
 .filter {
   width: 268px;
@@ -1628,7 +1610,7 @@ dt.active a.btn-active:active {
   width: 22px;
   height: 24px;
   background-size: cover;
-  transform: translate(1px, -1px);
+  transform: translate(-1px, -1px);
 }
 
 .cost-max:active {
@@ -1636,7 +1618,14 @@ dt.active a.btn-active:active {
   height: 24px;
   background-size: cover;
   transform: translate(1px, -1px);
+}
 
+.cost-min:hover{
+  cursor: pointer;
+}
+
+.cost-max:hover{
+  cursor: pointer;
 }
 
 .cost-output {
@@ -1659,6 +1648,7 @@ dt.active a.btn-active:active {
 
 .label-color-checkbox {
   display: inline-block;
+  vertical-align: middle;
   width: 200px;
   position: relative;
   font-size: 14px;
@@ -1715,6 +1705,7 @@ dt.active a.btn-active:active {
 
 .label-bluetooth-radio {
   display: inline-block;
+  vertical-align: middle;
   width: 200px;
   position: relative;
   font-size: 14px;
@@ -1837,7 +1828,6 @@ dt.active a.btn-active:active {
   margin-left: 0;
   margin-right: 0;
   opacity: 0.2;
-  
 }
 
 .sort .triangle:hover {
@@ -1874,8 +1864,6 @@ a.triangle-ascending {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
-
 
 .product-overview-item {
   position: relative;
@@ -2076,9 +2064,7 @@ iframe {
   width: 100%;
   height: 3000px;
   opacity: 0.5;
-  background-image: url(../device-catalog.jpg);
+  background-image: url(../device-index.jpg);
   background-repeat: no-repeat;
   background-position: top center;
 }
-
-
