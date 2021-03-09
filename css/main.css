@@ -1059,11 +1059,11 @@ ul.sub-site-navigation li:last-child {
   position: relative;
 }
 
-.service-list dt.active {
+.service-list .service-list__active {
   background-color: #000000;
 }
 
-dt.active a.btn-active {
+.service-list__active a.btn-active {
   display: inline-block;
   vertical-align: middle;
   padding-top: 8px;
@@ -1078,11 +1078,11 @@ dt.active a.btn-active {
   color: #f7e184;
 }
 
-dt.active a.btn-active:hover {
+.service-list__active a.btn-active:hover {
   color: rgba(247, 225, 132, 0.8);
 }
 
-dt.active a.btn-active:active {
+.service-list__active a.btn-active:active {
   color: rgba(247, 225, 132, 0.3);
 }
 

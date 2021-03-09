@@ -44,3 +44,34 @@ mapLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     mapPopup.classList.remove("modal-show");
   });
+
+// Табы
+var tabs = document.querySelectorAll(".btn-service");
+var tabsContent = document.querySelectorAll(".service-item");
+var tabsIndex = document.querySelectorAll("dt");
+
+
+
+
+for (let i = 0; i < tabs.length; i++) {
+  let tab = tabs[i];
+  let tabIndex = tabsIndex[i];
+  let tabContent = tabsContent[i];
+  tab.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    let tabsActive = document.querySelector(".btn-active");
+    let tabsContentActive = document.querySelector(".service-item-active");
+    let tabsIndexActive = document.querySelector(".service-list__active");
+    tabsIndexActive.classList.remove("service-list__active");
+    tabIndex.classList.add("service-list__active");
+    tabsContentActive.classList.remove("service-item-active");
+    tabContent.classList.add("service-item-active");
+    tabsActive.classList.remove("btn-active");
+    tabsActive.classList.add("btn");
+    tab.classList.remove("btn");
+    tab.classList.add("btn-active");
+
+    console.log(tab);
+  })
+}
+
