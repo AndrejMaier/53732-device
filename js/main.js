@@ -46,12 +46,9 @@ mapLink.addEventListener("click", function (evt) {
   });
 
 // Табы
-var tabs = document.querySelectorAll(".btn-service");
-var tabsContent = document.querySelectorAll(".service-item");
-var tabsIndex = document.querySelectorAll("dt");
-
-
-
+let tabs = document.querySelectorAll(".btn-service");
+let tabsContent = document.querySelectorAll(".service-item");
+let tabsIndex = document.querySelectorAll("dt");
 
 for (let i = 0; i < tabs.length; i++) {
   let tab = tabs[i];
@@ -74,4 +71,25 @@ for (let i = 0; i < tabs.length; i++) {
     console.log(tab);
   })
 }
+
+// Слайдеры
+let sliderSwitches = document.querySelectorAll(".slider-switch");
+let sliderItems = document.querySelectorAll(".item");
+
+for (let i = 0; i < sliderSwitches.length; i++) {
+  let sliderSwitch = sliderSwitches[i];
+  let sliderItem = sliderItems[i];
+
+  sliderSwitch.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    let sliderSwitchActive = document.querySelector(".active");
+    let sliderItemActive = document.querySelector(".item-active");
+    sliderSwitchActive.classList.remove("active");
+    sliderItemActive.classList.remove("item-active");
+    sliderSwitch.classList.add("active");
+    sliderItem.classList.add("item-active");
+  })
+}
+
+console.log(sliderItems);
 
