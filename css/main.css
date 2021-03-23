@@ -54,7 +54,7 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-/* Стили логотипа */ 
+/* Стили логотипа */
 .main-header .logo {
   position: absolute;
   left: 77px;
@@ -82,7 +82,7 @@ a {
 
 /* Стили основной навигации сайта */
 .main-navigation {
-  background-color: #f7e296; 
+  background-color: #f7e296;
   color: #000000;
   margin-top: 40px;
   width: 1040px;
@@ -148,7 +148,7 @@ a {
 .site-search .btn-search {
   padding: 8px 19px;
   margin-left: -4px;
-  border: 2px solid #000000; 
+  border: 2px solid #000000;
   background-color: #f7e296;
   font-size: 15px;
   line-height: 30px;
@@ -459,7 +459,7 @@ ul.sub-site-navigation li:last-child {
   width: auto;
   height: auto;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
 }
 
 .slider-description {
@@ -1114,17 +1114,17 @@ ul.sub-site-navigation li:last-child {
 .delivery::after {
   content: "";
   background-image: url(../img/service-delivery.svg);
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
 
 .warranty::after {
   background-image: url(../img/service-warranty.svg);
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
 
 .credit::after {
   background-image: url(../img/service-credit.svg);
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
 
 .service-item h3 {
@@ -1209,13 +1209,13 @@ ul.sub-site-navigation li:last-child {
 }
 
 .djl {
-  background-image: url(../img/company-djl.jpg); 
+  background-image: url(../img/company-djl.jpg);
   opacity: 0.2;
 }
 
 .djl:hover {
   background-image: url(../img/company-djl-hover.jpg);
-  opacity: 1;  
+  opacity: 1;
 }
 
 .sp-gadgets {
@@ -1353,7 +1353,7 @@ ul.sub-site-navigation li:last-child {
 
 .contacts p {
   margin-top: 30px;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
   padding-top: 4px;
   letter-spacing: 0.05px;
 }
@@ -1669,7 +1669,7 @@ ul.sub-site-navigation li:last-child {
 .filter-forms legend {
   width: 200px;
   border-top: 2px solid #000000;
-  font-family: 'Gilroy', Arial, sans-serif; 
+  font-family: 'Gilroy', Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
@@ -1748,7 +1748,7 @@ ul.sub-site-navigation li:last-child {
 }
 
 .cost-output {
-  font-family: 'Gilroy', Arial, sans-serif; 
+  font-family: 'Gilroy', Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
@@ -2102,7 +2102,6 @@ a.triangle-ascending {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 6px;
-  margin-bottom: ;
 }
 
 .title-product-box h3 {

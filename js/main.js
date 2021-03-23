@@ -66,15 +66,39 @@ for (let i = 0; i < tabs.length; i++) {
     tabsActive.classList.remove("btn-active");
     tabsActive.classList.add("btn");
     tab.classList.remove("btn");
-    tab.classList.add("btn-active");
-
-    console.log(tab);
+    tab.classList.add("btn-active")
   })
 }
 
 // Слайдеры
+
 let sliderSwitches = document.querySelectorAll(".slider-switch");
 let sliderItems = document.querySelectorAll(".item");
+
+// решить вопрос
+/*
+let sliderPlayer = function(i) {
+  let sliderSwitchActive = document.querySelector(".active");
+  let sliderItemActive = document.querySelector(".item-active");
+  sliderSwitchActive.classList.remove("active");
+  sliderItemActive.classList.remove("item-active");
+  sliderSwitches[i].classList.add("active");
+  sliderItems[i].classList.add("item-active");
+}
+
+let timer = setInterval(function() {
+  for ( let i = 0; i < sliderSwitches.length; i++) {
+    if (i === sliderSwitches.length) {
+      i = 0;
+      sliderPlayer(i);
+      console.log(i);
+    } else {
+      sliderPlayer(i);
+      console.log(i);
+    }
+  }
+}, 3000);
+*/
 
 for (let i = 0; i < sliderSwitches.length; i++) {
   let sliderSwitch = sliderSwitches[i];
@@ -89,7 +113,4 @@ for (let i = 0; i < sliderSwitches.length; i++) {
     sliderSwitch.classList.add("active");
     sliderItem.classList.add("item-active");
   })
-}
-
-console.log(sliderItems);
-
+};
